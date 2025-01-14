@@ -20,7 +20,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clase.h">
+    <ClInclude Include="student.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="premiu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="proba.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -2,7 +2,9 @@
 #include<string>
 #include<fstream>
 #include<vector>
-#include "clase.h"
+#include "student.h"
+#include "premiu.h"
+#include "proba.h"
 #include <cstdlib> 
 #include <ctime>
 
@@ -15,6 +17,7 @@ int main()
 
 	Premiu premiul1("O vacanta\n", "Un laptop\n", "Un ceas\n", "RESTUL LOCURILOR PRIMESC MENTIUNE , MULTUMIM TUTUROR PENTRU PARTICIPARE\n");
 	Probe probe("Informatia", "Facultatea de Automatica, Calculatoare si Electronica, CRAIOVA", "15 Ianuarie 2025", 10);
+	
 
 	string nume_elev, gmail_elev, scoala_de_provenienta;
 	int varsta_elev;
@@ -68,10 +71,10 @@ int main()
 			{
 				cout << "\nNu exista elevi inscrisi!\n";
 			}
-			else 
+			else
 			{
 				cout << "\nLista elevilor inscrisi : \n";
-				for (const auto& student : studenti) 
+				for (const auto& student : studenti)
 				{
 					cout << "Elevul: " << student.getNume()
 						<< " (COD: " << student.getCodUnic() << ")\n";
@@ -81,7 +84,7 @@ int main()
 
 		case 3:
 
-			if (studenti.empty()) 
+			if (studenti.empty())
 			{
 				cout << "\nNu exista elevi inscrisi!\n";
 				break;
@@ -185,17 +188,17 @@ int main()
 
 
 		case 7:
-			if (studenti.empty()) 
+			if (studenti.empty())
 			{
 				cout << "\nNu exista elevi inscrisi!\n";
 			}
-			else 
+			else
 			{
 				cout << "\nLista premiilor obtinute de elevi:\n";
 				for (const auto& student : studenti)
 				{
 					double nota = student.getNota();
-					if (nota == -1) 
+					if (nota == -1)
 					{
 						cout << "Elevul " << student.getNume()
 							<< " (COD: " << student.getCodUnic()
@@ -208,18 +211,18 @@ int main()
 					cout << "Nota obtinuta: " << nota << "\n";
 
 					if (nota >= 9.5)
-				    {
+					{
 						cout << "Premiul: O vacanta\n\n";
 					}
 					else if (nota >= 8.5)
 					{
 						cout << "Premiul: Un laptop\n\n";
 					}
-					else if (nota >= 7.5) 
+					else if (nota >= 7.5)
 					{
 						cout << "Premiul: Un ceas\n\n";
 					}
-					else 
+					else
 					{
 						cout << "Premiul: Mentiune. Multumim pentru participare!\n\n";
 					}
@@ -232,10 +235,7 @@ int main()
 			cout << " Ati iesit din meniu!\n";
 
 		}
-	}while (optiune != 8);
-		
+	} while (optiune != 8);
+
 	return 0;
 }
-
-
-		

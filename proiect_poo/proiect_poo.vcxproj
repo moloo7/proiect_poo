@@ -130,7 +130,9 @@
     <ClCompile Include="gestionarea_comp_academice.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="clase.h" />
+    <ClInclude Include="student.h" />
+    <ClInclude Include="premiu.h" />
+    <ClInclude Include="proba.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
